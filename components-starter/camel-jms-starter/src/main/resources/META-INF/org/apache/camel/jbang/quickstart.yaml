@@ -1,0 +1,15 @@
+---
+language: java
+dependencies:
+  - org.apache.camel.springboot:camel-direct-starter:4.8.0-SNAPSHOT
+  - org.apache.camel.springboot:camel-jackson-starter:4.8.0-SNAPSHOT
+  - org.apache.camel.springboot:camel-rest-starter:4.8.0-SNAPSHOT
+test-dependencies:
+  - org.apache.camel.springboot:camel-http-starter:4.8.0-SNAPSHOT
+  - org.apache.camel:camel-test-spring-junit5:4.8.0-SNAPSHOT
+  - org.springframework.boot:spring-boot-test:3.3.2
+sources:
+  - application.properties.ftl
+  - Book.ftl
+  - JMSRoutes.ftl
+  - JMSTest.ftl

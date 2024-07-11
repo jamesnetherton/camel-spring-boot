@@ -1,0 +1,20 @@
+---
+language: java
+application-properties:
+  mongodb.hosts: mongodb://10.211.55.4:27017
+  mongodb.database: camel
+  mongodb.collection: test
+dependencies:
+  - org.apache.camel.springboot:camel-direct-starter:4.8.0-SNAPSHOT
+  - org.apache.camel.springboot:camel-log-starter:4.8.0-SNAPSHOT
+  - org.apache.camel.springboot:camel-rest-starter:4.8.0-SNAPSHOT
+test-dependencies:
+  - org.apache.camel.springboot:camel-http-starter:4.8.0-SNAPSHOT
+  - org.apache.camel:camel-test-spring-junit5:4.8.0-SNAPSHOT
+  - org.springframework.boot:spring-boot-test:3.3.2
+  - org.testcontainers:mongodb:1.20.0
+sources:
+  - MongoDBRoutes.ftl
+  - MongoDBConfiguration.ftl
+test-sources:
+  - MongoDBTest.ftl
